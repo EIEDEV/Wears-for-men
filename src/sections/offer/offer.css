@@ -1,0 +1,266 @@
+#offer{
+    padding: unset;
+    background-color: #fefefa;
+}
+
+.offer-container{
+    padding: 2rem;
+}
+
+.offer-up-side{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.shipping, .support{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 3.6rem;
+    background-color: #478b94;
+    position: relative;
+    color: #dfdfdf;
+}
+
+.shipping::after, .shipping::before{
+    content: "";
+    position: absolute;
+    left: 100%;
+    width: 40px;
+    height: 50%;
+    background-color: yellow;
+}
+
+.shipping::after{
+    bottom: 0px;
+    background: linear-gradient(to bottom right, #478b94 50%, transparent 50%);
+}
+
+.shipping::before {
+    top: 0px;
+    background: linear-gradient(to top right, #478b94 50%, transparent 50%);
+}
+
+.support::after,
+.support::before {
+    content: "";
+    position: absolute;
+    right: 100%;
+    width: 40px;
+    height: 50%;
+}
+
+.support::after {
+    bottom: 0px;
+    background: linear-gradient(to bottom left, #478b94 50%, transparent 10%);
+}
+
+.support::before {
+    top: 0px;
+    background: linear-gradient(to top left, #478b94 50%, transparent 10%);
+}
+
+.returns{
+    background-color: black;
+    color: #dfdfdf;
+    padding: 0.8rem 2.7rem;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+   position: relative;
+   width: max-content;
+}
+
+.returns::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 50%;
+    z-index: 99;
+    background-color: white;
+    top: 0;
+    background: linear-gradient(to top left, #fff 50%, transparent 10%);
+}
+.return-text p{
+    font-size: 0.7rem;
+}
+.return-text h2{
+    font-size: 1rem;
+}
+
+.returns::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 50%;
+    z-index: 99;
+    background-color: white;
+    bottom: 0;
+    background: linear-gradient(to bottom left, #fff 50%, transparent 10%);
+}
+
+.sepa{
+    position: absolute;
+    left: 0;
+    width: 40px;
+    height: 50%;
+    z-index: 99;
+    background-color: white;
+    bottom: 0;
+    background: linear-gradient(to bottom right, #fff 50%, transparent 10%);
+}
+.sep{
+    position: absolute;
+        left: 0;
+        width: 40px;
+        height: 50%;
+        z-index: 99;
+        background-color: white;
+        top: 0;
+        background: linear-gradient(to top right, #fff 50%, transparent 10%);
+}
+
+.offer-down-side{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+}
+ 
+.bag{
+    flex-direction: column;
+    justify-content: right;
+    display: flex;
+    align-items: flex-end;
+    row-gap: 2rem;
+}
+
+.bags, .trouser, .shoes, .watch{
+    width: 300px;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+    position: relative;
+}
+
+.shoe-side{
+ display: grid;
+ grid-template-rows: 1fr 1fr;
+ row-gap: 1rem;
+}
+
+.full-side{
+    background-color: black;
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eeeeee;
+        position: relative;
+} 
+
+.full-side img{
+    width: min-content;
+    height: 100%;
+}
+
+
+.truser-abs{
+    width: max-content;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.truser-abs p{
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+#offer .btn{
+    background-color: #4d8a8d;
+    border-radius: 0;
+    color: white;
+}
+
+.bg{
+    top: 80%;
+}
+
+.wt{
+    top: 7%;
+    left: 20%;
+}
+
+.SH{
+    top: 78.5%;
+    left: 20%;
+}
+
+.SH p{
+    font-size: 3rem;
+}
+
+.SH h3{
+    margin-left: -3rem;
+    margin-bottom: -1rem;
+}
+
+.fu{
+        top: 50%;
+        left: 0;
+        transform: translateY( -50%);
+        gap:0.5rem;
+}
+
+
+@media screen and (max-width:950px) {
+    .offer-up-side{
+        display: none;
+    }
+
+    .offer-down-side{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .bag, .shoe-side{
+        display: flex;
+        flex-direction: unset;
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .offer-up-side {
+        display: none;
+    }
+
+    .offer-down-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .full-side{
+        width: 100%;
+    }
+}

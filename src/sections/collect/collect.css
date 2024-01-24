@@ -1,0 +1,24 @@
+#latest{
+    background-color: #fffbf2;
+}
+
+
+.last{
+    width: auto;
+    object-fit: cover;
+    overflow: hidden;
+    height: 40rem;
+}
+
+.last img {
+    display: flex;
+    height: 100%;
+}
+
+.slick-arrow::before, .slick-arrow::after {
+    color: #000;
+}
+
+#latest p:last-child{
+    margin-top: 2rem;
+}

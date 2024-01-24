@@ -1,0 +1,81 @@
+#contact{
+    background-color: black;
+}
+.contact-container{
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
+    gap: 1.5rem;
+}
+
+.products, .about, .contact{
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 1.5rem;
+}
+
+.social{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.socialmedia p{
+    display: flex;
+    justify-content: flex-start;
+    gap: 2.5rem;
+    font-size: 1.2rem;
+}
+
+.socialmedia p p{
+    transform: rotate(45deg);
+    display: flex;
+    justify-content: baseline;
+}
+
+
+.search{
+    display: flex;
+    align-items: center;
+    border: 1px solid green;
+    position: relative;
+    background-color: white;
+    padding: 0.6rem;
+    border-radius: 147.2px;
+}
+
+.search input{
+    border: none;
+    outline: none;
+    flex-basis: 80%;
+    height: 100%;
+    padding-left: 1rem;
+    border-radius: 1rem;
+}
+
+.sub{
+    flex-basis: 29%;
+    background-color: gray;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 4rem;
+} 
+
+@media screen and (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .contact-container{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+}
